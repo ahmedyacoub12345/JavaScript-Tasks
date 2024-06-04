@@ -194,6 +194,10 @@ Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
 
+function tellFortune(x,y,z,n){
+    console.log(`You will be a ${x} in ${y}, and married to ${z} with ${n} kids`);
+}
+tellFortune("Software engineer","Jordan","Alice",3);
 
 /*
 2
@@ -208,7 +212,13 @@ Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
 
-
+function calculateDogAge(p){
+    if(p>0){
+        let y = p * 7;
+        console.log(`Your doggie is ${y} years old in dog years!`);
+    }
+}
+calculateDogAge(1);
 /*
 3
 Write a function named calculateSupply that:
@@ -221,6 +231,13 @@ Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
 
+function calculateSupply(age,amount){
+    const max_age=100;
+    let lose_age=max_age - age ;
+    let total = lose_age * 365 * amount;
+    console.log(`You will need ${total} cups of tea to last you until the ripe old age of ${max_age}`);
+}
+calculateSupply(30,3);
 
 /*
 4
@@ -232,6 +249,10 @@ Ex: greet("Adam")
 => "Hello Adam"
 */
 
+function greet(name){
+    console.log("Hello"+" "+name);
+} 
+greet("Adam");
 
 /*
 5
@@ -249,7 +270,17 @@ function double('7') {
 }
 */
 
+//1 : function double(cat) {
+//   return 2 * cat;
+// }
 
+//2 : function double(x) {
+//   return 2 * x;
+// }
+
+//3 : function double(x) {
+//   return 2 * x;
+// }
 
 /*
 6
@@ -267,6 +298,17 @@ function (x) double3 {
 
 */
 
+//1 : function double1(x) {
+//   return 2 * x ;
+// }
+
+//2 : function double2(x) {
+//   return 2 * x ;
+// }
+
+//1 : function double3(x) {
+//   return 2 * x ;
+// }
 
 /*
 7
@@ -277,6 +319,11 @@ Ex: cube(4)
 => 64
 */
 
+function cube(i){
+    let c = i**3;
+    console.log(c);
+}
+cube(4);
 
 /*
 8
@@ -284,3 +331,8 @@ Write a function called multiply that:
 accept 2 parameters and calculate the multiply of these 2 numbers
 ... (293 lines left)
 */
+function multiply(a,b){
+    let total= a * b;
+    console.log(total);
+}
+multiply(5,6)
