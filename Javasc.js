@@ -16,35 +16,47 @@ function change() {
     document.getElementById('img').src = imageSrc;
 }
 
-//**********************************************************************************/
+//********************************************************************************* */
 
-document.addEventListener('DOMContentLoaded', function () {
-    const fontStyleSelect = document.getElementById('font-style');
-    const fontSizeSelect = document.getElementById('font-size');
-    const boldCheckbox = document.getElementById('bold');
-    const italicCheckbox = document.getElementById('italic');
-    const underlineCheckbox = document.getElementById('underline');
-    const textDiv = document.getElementById('textproperties');
+let x= document.getElementById("Fontstyle");
+let p =document.getElementById("P");
+x.addEventListener('change',function (){
+    p.style.fontFamily=x.value;
 
-    function applyStyles() {
-        let fontStyle = fontStyleSelect.value;
-        let fontSize = fontSizeSelect.value;
-        let fontWeight = boldCheckbox.checked ? 'bold' : 'normal';
-        let fontStyleCSS = italicCheckbox.checked ? 'italic' : 'normal';
-        let textDecoration = underlineCheckbox.checked ? 'underline' : 'none';
+})
+let m =document.getElementById("Fontsize");
+let n= document.getElementById("P")
+m.addEventListener('change',function(){
+    n.style.fontSize=m.value;
+})
 
-        textDiv.style.fontFamily = fontStyle;
-        textDiv.style.fontSize = fontSize;
-        textDiv.style.fontWeight = fontWeight;
-        textDiv.style.fontStyle = fontStyleCSS;
-        textDiv.style.textDecoration = textDecoration;
+let bold=document.getElementById("bold");
+bold.addEventListener('change',function(){
+    if(this.checked){
+        n.style.fontWeight=bold.value;
+    }else{
+        n.style.fontWeight='normal';
+
     }
-
-    fontStyleSelect.addEventListener('change', applyStyles);
-    fontSizeSelect.addEventListener('change', applyStyles);
-    boldCheckbox.addEventListener('change', applyStyles);
-    italicCheckbox.addEventListener('change', applyStyles);
-    underlineCheckbox.addEventListener('change', applyStyles);
-
-    applyStyles();
 });
+
+let italic = document.getElementById("italic");
+italic.addEventListener('change',function(){
+    if (this.checked){
+        n.style.fontStyle=italic.value;
+    }
+    else{
+        n.style.fontStyle="normal";
+    }
+});
+
+let underline = document.getElementById("underline");
+underline.addEventListener('change',function(){
+    if(this.checked){
+        n.style.textDecoration=underline.value;
+    }
+    else{
+        n.style.textDecoration="none";
+    }
+});
+
