@@ -47,8 +47,28 @@
         </label>
     </div>
 
-    <div id="textproperties"><p id="P">The quick brown fox over the lazy dog!</p></div>
-   
+    <div id="textproperties"><p id="P">The quick brown fox over the lazy dog!</p></div><hr>
+
+    <div id="square"></div><hr>
+
+    <!-- <div id="password">
+        <label for="">Password (at least 6 characters) :</label>
+        <input type="password" placeholder="Enter Password" id="Pass1"> <span id="Errorpass1"></span><br>
+        <label for="">Repeat password :</label>
+        <input type="password"placeholder="Repeate Password" id="Pass2" ><span id="Errorpass2"></span><br>
+        <button id="subBtn">submit</button>
+    </div> -->
+    <div>
+        <label for="password1">Password (Min 6 characters) :</label>
+        <input type="password" id="password1" oninput="validateForm()">
+        <span id="errorPassword1" class="error"></span>
+        <br><br>
+        <label for="password2">Repeat Password:</label>
+        <input type="password" id="password2" oninput="validateForm()">
+        <span id="errorPassword2" class="error"></span>
+        <br><br>
+        <button type="submit" id="submitBtn">Submit</button>
+    </div>
 
     <script src="Javasc.js"></script>
 </body>

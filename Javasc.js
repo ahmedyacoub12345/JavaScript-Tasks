@@ -60,3 +60,43 @@ underline.addEventListener('change',function(){
     }
 });
 
+//********************************************************************************* */
+
+
+let square = document.getElementById("square");
+square.addEventListener('click',function(){
+    square.style.backgroundColor= "red";
+});
+
+
+//********************************************************************************* */
+
+
+
+function validateForm() {
+    const password1 = document.getElementById('password1').value;
+    const password2 = document.getElementById('password2').value;
+    let errorPassword1 = '';
+    let errorPassword2 = '';
+
+    // Validate first password
+    if (password1.length < 6) {
+        errorPassword1 = 'Password must be at least 6 characters long.';
+    }
+
+    // Validate password confirmation
+    if (password2 !== password1) {
+        errorPassword2 = 'Passwords must match.';
+    }
+
+    // Display error messages
+    document.getElementById('errorPassword1').innerText = errorPassword1;
+    document.getElementById('errorPassword2').innerText = errorPassword2;
+
+    // Show or hide submit button based on errors
+    if (errorPassword1 === '' && errorPassword2 === '') {
+        document.getElementById('submitBtn').style.display = 'block';
+    } else {
+        document.getElementById('submitBtn').style.display = 'none';
+    }
+}

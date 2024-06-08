@@ -18,3 +18,14 @@
 #textproperties p{
     margin: 15px;
 }
+
+#square{
+    width: 200px; 
+    height: 200px;
+    border: 1px solid black;
+    background: blue;
+}
+
+#password2{
+    margin-left: 78px;
+}
