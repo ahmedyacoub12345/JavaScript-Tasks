@@ -29,3 +29,17 @@
 #password2{
     margin-left: 78px;
 }
+
+span{
+    color: red;
+}
+#newsong{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(163, 163, 163);
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+}

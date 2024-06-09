@@ -81,12 +81,12 @@ function validateForm() {
 
     // Validate first password
     if (password1.length < 6) {
-        errorPassword1 = 'Password must be at least 6 characters long.';
+        errorPassword1 = 'Too Short';
     }
 
     // Validate password confirmation
     if (password2 !== password1) {
-        errorPassword2 = 'Passwords must match.';
+        errorPassword2 = "The two passwords don't match";
     }
 
     // Display error messages
@@ -100,3 +100,25 @@ function validateForm() {
         document.getElementById('submitBtn').style.display = 'none';
     }
 }
+
+
+
+//********************************************************************************* */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addSongButton = document.getElementById('songBtn');
+    const songInput = document.getElementById('addsong');
+    const newsongParagraph = document.getElementById('newsong');
+
+    const displaySongName = () => {
+        const songName = songInput.value;
+        if (songName) {
+            newsongParagraph.textContent = songName;
+            songInput.value = '';
+        }
+    };
+
+    addSongButton.addEventListener('click', displaySongName);
+
+});
