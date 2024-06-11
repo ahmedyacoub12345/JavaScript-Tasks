@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 </title>
+    <style>
+        .error {
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <label for="">Animal : </label>
+    <select id="Animal" >
+        <!-- <option value="Cats">Cats</option>
+        <option value="Dogs">Dogs</option>
+        <option value="Bees">Bees</option>
+        <option value="Butterfly">Butterfly</option> -->
+    </select><br><br><br>
+    <div>
+        <img src="" alt="" id="image" style="width: 350px; height: 350px;">
+    </div><br><br><br><hr><br>
+
+<!-- *********************************************************************** -->
+
+<form action="" id="Info">
+    <label for="name">Name: </label>
+    <input type="text" id="name"><br><br>
+    
+    <label for="age">Age: </label>
+    <input type="text" id="age"><br><br>
+    
+    <label for="gender">Gender: </label>
+    <input type="text" id="gender"><br><br>
+    
+    <label for="birthdate">Birth Date: </label>
+    <input type="date" id="birthdate"><br><br>
+    
+    <label for="image">Your Image: </label>
+    <input type="text" id="image"><br><hr><br>
+    
+    <label for="description">Description: </label>
+    <input type="text" id="description"><br><br>
+    
+    <label for="major">Major & University: </label>
+    <input type="text" id="major"><br><br>
+    
+    <label for="programminglanguage1">Programming Language: </label>
+    <input type="checkbox" id="html">
+    <label for="programminglanguage1">HTML</label>
+    <input type="checkbox" id="css">
+    <label for="programminglanguage2">CSS</label>
+    <input type="checkbox" id="js">
+    <label for="programminglanguage3">JS</label>
+    <br><hr><br>
+    
+    <label for="number">Siblings Number: </label><br>
+    <input type="text" id="number"><br><br>
+    
+    <label for="descsibling">Description of Siblings: </label><br>
+    <input type="text" id="descsibling"><br><br>
+    
+    <button id="SubBtn" type="submit">Submit</button>
+</form><hr><br><br>
+
+
+
+<!-- ********************************************************************* -->
+
+<form>
+    <label for="Fname">First Name:</label><br>
+    <input type="text" id="Fname" onchange="validateInputCustom('Fname', /^[^\d]+$/, 'Numbers are not allowed')">
+    <span id="fnames" class="error">Numbers are not allowed</span><br>
+
+    <label for="Lname">Last Name:</label><br>
+    <input type="text" id="Lname" onchange="validateInputCustom('Lname', /^[^\d]+$/, 'Numbers are not allowed')">
+    <span id="lnames" class="error">Numbers are not allowed</span><br>
+
+    <label for="Bdate">Birth Date:</label><br>
+    <input type="text" id="Bdate" onchange="validateBirthDate()">
+    <span id="bdates" class="error">The format should be dd/mm/yyyy</span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" onchange="validateInputCustom('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'The e-mail is not valid')">
+    <span id="emails" class="error">The e-mail is not valid</span><br>
+
+    <label for="email2">Confirm Email:</label><br>
+    <input type="text" id="email2" onchange="validateEmailMatchCustom()">
+    <span id="email2s" class="error">The e-mails do not match</span><br>
+
+    <label for="pass">Password:</label><br>
+    <input type="password" id="pass" onchange="validateInputCustom('pass', /^(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 'Password must be at least 8 characters long and include at least one special character')">
+    <span id="passs" class="error">Password must be at least 8 characters long and include at least one special character</span><br>
+
+    <label for="pass2">Confirm Password:</label><br>
+    <input type="password" id="pass2" onchange="validatePassMatchCustom()">
+    <span id="pass2s" class="error">The passwords do not match</span><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+    <script src="Javascr.js"></script>
+</body>
+</html>
