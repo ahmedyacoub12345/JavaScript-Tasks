@@ -106,7 +106,6 @@ function validateForm() {
 //********************************************************************************* */
 
 
-document.addEventListener('DOMContentLoaded', () => {
     const addSongButton = document.getElementById('songBtn');
     const songInput = document.getElementById('addsong');
     const newsongParagraph = document.getElementById('newsong');
@@ -120,5 +119,3 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     addSongButton.addEventListener('click', displaySongName);
-
-});
