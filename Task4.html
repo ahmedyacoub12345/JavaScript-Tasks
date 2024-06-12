@@ -70,37 +70,23 @@
 
 <!-- ********************************************************************* -->
 
-<form>
-    <label for="Fname">First Name:</label><br>
-    <input type="text" id="Fname" onchange="validateInputCustom('Fname', /^[^\d]+$/, 'Numbers are not allowed')">
-    <span id="fnames" class="error">Numbers are not allowed</span><br>
 
-    <label for="Lname">Last Name:</label><br>
-    <input type="text" id="Lname" onchange="validateInputCustom('Lname', /^[^\d]+$/, 'Numbers are not allowed')">
-    <span id="lnames" class="error">Numbers are not allowed</span><br>
-
-    <label for="Bdate">Birth Date:</label><br>
-    <input type="text" id="Bdate" onchange="validateBirthDate()">
-    <span id="bdates" class="error">The format should be dd/mm/yyyy</span><br>
-
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" onchange="validateInputCustom('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'The e-mail is not valid')">
-    <span id="emails" class="error">The e-mail is not valid</span><br>
-
-    <label for="email2">Confirm Email:</label><br>
-    <input type="text" id="email2" onchange="validateEmailMatchCustom()">
-    <span id="email2s" class="error">The e-mails do not match</span><br>
-
-    <label for="pass">Password:</label><br>
-    <input type="password" id="pass" onchange="validateInputCustom('pass', /^(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 'Password must be at least 8 characters long and include at least one special character')">
-    <span id="passs" class="error">Password must be at least 8 characters long and include at least one special character</span><br>
-
-    <label for="pass2">Confirm Password:</label><br>
-    <input type="password" id="pass2" onchange="validatePassMatchCustom()">
-    <span id="pass2s" class="error">The passwords do not match</span><br><br>
-
-    <input type="submit" value="Submit">
-</form>
+        <form action="">
+            <label for="inp1">Enter a Fname:</label><br>
+            <input type="text" id="inp1"><span id="sp1"></span><br>
+            <label for="inp2">Enter a Lname:</label><br>
+            <input type="text" id="inp2"><span id="sp2"></span><br>
+            <label for="inp3">Enter a Bdate:</label><br>
+            <input type="text" id="inp3"><span id="sp3"></span><br>
+            <label for="inp4">Enter an Email:</label><br>
+            <input type="text" id="inp4"><span id="sp4"></span><br>
+            <label for="inp5">Confarim Email:</label><br>
+            <input type="email" id="inp5"><span id="sp5"></span><br>
+            <label for="inp6">Password:</label><br>
+            <input type="password" id="inp6"><span id="sp6"></span><br>
+            <label for="inp7">confirm Password:</label><br>
+            <input type="password" id="inp7"><span id="sp7"></span>
+        </form>
 
 
     <script src="Javascr.js"></script>
